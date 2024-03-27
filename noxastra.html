@@ -47,8 +47,8 @@
 
         .imagechar {
           position: absolute;
-          width: auto; /* Set height to 400px */
-          width: 7%; /* Maintain aspect ratio */
+          width: auto; 
+          width: 7%; 
           transition: transform 0.3s;
           cursor: pointer;
           top: 95%;
@@ -58,16 +58,16 @@
           transform: scale(1.5);
         }
         .nombrechar {
-          font-size: 60px; /* Set bigger font size */
-          color: white; /* Set red color */
+          font-size: 60px; 
+          color: white; 
         }
         .descripcionchar {
           position: absolute;
           top: 200%;
           width: 100%;
           text-align: center;
-          font-size: 30px; /* Set font size to 20 pixels */
-          color: #bbbbbb; /* Set default color */
+          font-size: 30px; 
+          color: #bbbbbb; 
           z-index: 3;
           padding-top: 50;
         }
@@ -129,8 +129,8 @@
           top: 201.5%;
           width: 100%;
           text-align: center;
-          font-size: 60px; /* Set font size to 20 pixels */
-          color: white; /* Set default color */
+          font-size: 60px; 
+          color: white; 
           z-index: 3;
           padding-top: 50;
         }
@@ -139,8 +139,8 @@
           top: 89%;
           width: 100%;
           text-align: center;
-          font-size: 35px; /* Set font size to 20 pixels */
-          color: rgb(255, 255, 255); /* Set default color */
+          font-size: 35px; 
+          color: rgb(255, 255, 255); 
           z-index: 4;
           padding-top: 50;
         }
@@ -150,15 +150,15 @@
           width: 80%;
           left: 10%;
           text-align: center;
-          font-size: 30px; /* Set font size to 20 pixels */
-          color: rgb(255, 255, 255); /* Set default color */
+          font-size: 30px; 
+          color: rgb(255, 255, 255); 
           z-index: 4;
           padding-top: 50;
         }
         .social {
           position: absolute;
           height: auto;
-          width: 3%; /* Maintain aspect ratio */
+          width: 3%; 
           cursor: pointer;
           top: 365%;
           z-index: 3;
@@ -234,12 +234,12 @@
                 images[currentCharIndex].classList.add('active');
                 updateDescripcionChar(currentCharIndex);
                 updateGallerySlide(currentCharIndex);
-                imageDescription.innerText = ''; // Remove "The Journey" when character is selected
+                imageDescription.innerText = '';
             } else {
                 currentCharIndex = null;
-                descripcionchar.innerHTML = ''; // Remove description when no character is selected
+                descripcionchar.innerHTML = ''; 
                 resetGallery();
-                imageDescription.innerText = 'The Journey'; // Add "The Journey" back when no character is selected
+                imageDescription.innerText = 'The Journey'; 
             }
         }
 
@@ -264,12 +264,12 @@
             for (let i = 0; i < totalSlides; i++) {
                 slides[i].src = `art${i + 1}.jpg`;
             }
-            currentIndex = 0; // Reset the current index when resetting the gallery
+            currentIndex = 0; 
         }
 
         function changeSlide(direction) {
             if (currentCharIndex !== null) {
-                currentIndex = (currentIndex + direction + 10) % 10; // Assuming each character can have up to 10 images
+                currentIndex = (currentIndex + direction + 10) % 10; 
             } else {
                 currentIndex = (currentIndex + direction + totalSlides) % totalSlides;
             }
@@ -277,7 +277,7 @@
             document.querySelector('.image-container').style.transform = `translateX(${offset})`;
         }
 
-        // Function to get the correct image name for the character
+        
         function getCharacterImageName(charIndex, imageNumber) {
             const characterNames = ['riujok', 'spitze', 'noid', 'bocchi'];
             return characterNames[charIndex] + imageNumber;
